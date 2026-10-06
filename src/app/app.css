@@ -1,0 +1,1091 @@
+/* =========================================================
+   MOVIEVERSE - MAIN STYLES
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #080a11;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  height: 72px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 5%;
+
+  background: rgba(8, 10, 17, 0.96);
+
+  border-bottom: 1px solid #1e222d;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+
+  white-space: nowrap;
+
+  margin-right: 45px;
+}
+
+.logo-red {
+  color: #e50914;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  flex: 1;
+}
+
+.nav-links a {
+  color: #b7bac4;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.nav-search {
+  position: relative;
+}
+
+.nav-search input {
+  width: 220px;
+
+  padding: 11px 42px 11px 15px;
+
+  border-radius: 6px;
+
+  border: 1px solid #303542;
+
+  background: #151822;
+
+  color: white;
+
+  outline: none;
+
+  font-size: 13px;
+}
+
+.nav-search input::placeholder {
+  color: #777d89;
+}
+
+.nav-search input:focus {
+  border-color: #e50914;
+}
+
+.nav-search button {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  width: 40px;
+  height: 100%;
+
+  border: none;
+
+  background: transparent;
+
+  color: #888d99;
+
+  cursor: pointer;
+
+  font-size: 17px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-search button:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  min-height: 600px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #080a11;
+}
+
+.hero-background {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center 25%;
+
+  opacity: 0.48;
+}
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      #080a11 0%,
+      rgba(8, 10, 17, 0.92) 28%,
+      rgba(8, 10, 17, 0.55) 58%,
+      rgba(8, 10, 17, 0.88) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #080a11 0%,
+      transparent 40%,
+      rgba(8, 10, 17, 0.2) 100%
+    );
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 50%;
+
+  margin-left: 7%;
+
+  padding: 90px 0;
+}
+
+.hero-badge {
+  display: inline-block;
+
+  color: #e50914;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  margin: 0 0 15px;
+
+  font-size: clamp(48px, 6vw, 82px);
+
+  line-height: 0.95;
+
+  font-weight: 900;
+
+  letter-spacing: -2px;
+}
+
+.hero-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #d0d2d8;
+
+  font-size: 14px;
+
+  margin-bottom: 20px;
+}
+
+.hero-rating {
+  color: #ffd43b;
+
+  font-weight: 700;
+}
+
+.hero-content p {
+  max-width: 600px;
+
+  color: #b8bbc4;
+
+  line-height: 1.7;
+
+  font-size: 15px;
+
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.watch-button,
+.list-button {
+  border: none;
+
+  padding: 13px 22px;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.watch-button {
+  background: #e50914;
+
+  color: white;
+}
+
+.watch-button:hover {
+  background: #f51b26;
+
+  transform: translateY(-1px);
+}
+
+.list-button {
+  background: rgba(255, 255, 255, 0.12);
+
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.list-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================================================
+   MOVIES SECTION
+   ========================================================= */
+
+.movies-section {
+  padding: 70px 5% 90px;
+
+  background: #080a11;
+}
+
+.section-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.section-label {
+  margin: 0 0 7px;
+
+  color: #e50914;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.section-header h2 {
+  margin: 0;
+
+  font-size: 30px;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   GENRE FILTER
+   ========================================================= */
+
+.genre-filter {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 30px;
+}
+
+.genre-filter button {
+  padding: 9px 16px;
+
+  border: 1px solid #292e3a;
+
+  border-radius: 20px;
+
+  background: #12151e;
+
+  color: #aeb2bd;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  transition: 0.2s ease;
+}
+
+.genre-filter button:hover {
+  color: white;
+
+  border-color: #555b68;
+}
+
+.genre-filter button.active {
+  background: #e50914;
+
+  color: white;
+
+  border-color: #e50914;
+}
+
+
+/* =========================================================
+   MOVIE GRID
+   ========================================================= */
+
+.movie-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 28px 18px;
+}
+
+.movie-card {
+  min-width: 0;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+}
+
+.poster {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 2 / 3;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+
+  background: #141720;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.poster img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.movie-card:hover .poster img {
+  transform: scale(1.04);
+}
+
+.poster::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.65),
+      transparent 35%
+    );
+
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+
+  right: 12px;
+  top: 12px;
+
+  z-index: 3;
+
+  width: 36px;
+  height: 36px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  color: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s ease;
+}
+
+.heart:hover {
+  background: #e50914;
+
+  transform: scale(1.08);
+}
+
+.poster-rating {
+  position: absolute;
+
+  left: 12px;
+  bottom: 10px;
+
+  z-index: 3;
+
+  color: #ffd43b;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.movie-info {
+  padding: 12px 2px 0;
+}
+
+.movie-info h3 {
+  margin: 0 0 7px;
+
+  font-size: 16px;
+
+  color: white;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.movie-info p {
+  margin: 0;
+
+  color: #777d8a;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   NO RESULTS
+   ========================================================= */
+
+.no-results {
+  padding: 80px 20px;
+
+  text-align: center;
+
+  color: #8e939f;
+}
+
+.no-results h3 {
+  color: white;
+}
+
+
+/* =========================================================
+   MOVIE DETAIL MODAL
+   ========================================================= */
+
+.modal-background {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1500;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(0, 0, 0, 0.82);
+}
+
+.modal {
+  width: 850px;
+
+  max-width: 100%;
+
+  background: #10131c;
+
+  border: 1px solid #292e39;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.8);
+}
+
+.modal-close {
+  position: absolute;
+
+  right: 16px;
+  top: 16px;
+
+  z-index: 10;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  color: white;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: #e50914;
+}
+
+.modal-content {
+  display: grid;
+
+  grid-template-columns: 280px 1fr;
+
+  gap: 30px;
+
+  padding: 30px;
+}
+
+.modal-poster {
+  width: 100%;
+
+  aspect-ratio: 2 / 3;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: #171a22;
+}
+
+.modal-poster img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.modal-details {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.modal-details h2 {
+  margin: 0 0 15px;
+
+  font-size: 38px;
+}
+
+.modal-meta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #aeb2bc;
+
+  font-size: 13px;
+
+  margin-bottom: 20px;
+}
+
+.modal-rating {
+  color: #ffd43b;
+
+  font-weight: 700;
+}
+
+.description {
+  color: #9ea3ae;
+
+  line-height: 1.7;
+
+  font-size: 14px;
+
+  max-width: 550px;
+}
+
+.modal-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.disabled-button {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   TRAILER MODAL
+   ========================================================= */
+
+.trailer-background {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  background: rgba(0, 0, 0, 0.94);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+}
+
+.trailer-modal {
+  width: 950px;
+
+  max-width: 100%;
+
+  background: #10131c;
+
+  border: 1px solid #292d39;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.9);
+}
+
+.trailer-header {
+  padding: 20px 28px;
+}
+
+.trailer-header h2 {
+  margin: 5px 0 0;
+
+  color: white;
+
+  font-size: 28px;
+}
+
+.small-title {
+  margin: 0;
+
+  color: #e50914;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* VIDEO AREA */
+
+.video-container {
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  background: #000;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+
+  visibility: visible;
+
+  opacity: 1;
+}
+
+
+/* TRAILER CLOSE */
+
+.trailer-close {
+  position: absolute;
+
+  right: 15px;
+  top: 15px;
+
+  z-index: 10;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.8);
+
+  color: white;
+
+  font-size: 26px;
+
+  cursor: pointer;
+}
+
+.trailer-close:hover {
+  background: #e50914;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-search input {
+    width: 170px;
+  }
+
+  .movie-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .hero-content {
+    width: 65%;
+
+    margin-left: 5%;
+  }
+
+}
+
+
+@media (max-width: 750px) {
+
+  .navbar {
+    height: auto;
+
+    padding: 15px 20px;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+
+  .nav-links {
+    order: 3;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 3px;
+  }
+
+  .nav-search {
+    margin-left: auto;
+  }
+
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero-content {
+    width: 85%;
+
+    margin-left: 7%;
+  }
+
+  .movie-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 22px 12px;
+  }
+
+  .modal-content {
+    grid-template-columns: 190px 1fr;
+
+    gap: 20px;
+
+    padding: 22px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .nav-search {
+    width: 100%;
+  }
+
+  .nav-search input {
+    width: 100%;
+  }
+
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero-content {
+    width: 88%;
+
+    margin-left: 6%;
+
+    padding-top: 150px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+
+  .movies-section {
+    padding: 50px 20px 70px;
+  }
+
+  .movie-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .modal-background {
+    padding: 10px;
+  }
+
+  .modal-content {
+    grid-template-columns: 1fr;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+  }
+
+  .modal-poster {
+    width: 180px;
+
+    margin: 0 auto;
+  }
+
+  .modal-details h2 {
+    font-size: 28px;
+  }
+
+  .modal-actions {
+    flex-wrap: wrap;
+  }
+
+  .trailer-background {
+    padding: 10px;
+  }
+
+  .trailer-header {
+    padding: 16px;
+  }
+
+  .trailer-header h2 {
+    font-size: 22px;
+  }
+
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  padding: 35px 20px 40px;
+
+  text-align: center;
+
+  background: #080a11;
+
+  color: #777d89;
+}
+
+.footer-line {
+  width: 80px;
+  height: 2px;
+
+  margin: 0 auto 20px;
+
+  background: #e50914;
+}
+
+.site-footer p {
+  margin: 0 0 8px;
+
+  font-size: 14px;
+}
+
+.site-footer p span {
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+.site-footer small {
+  color: #555b68;
+
+  font-size: 11px;
+}
